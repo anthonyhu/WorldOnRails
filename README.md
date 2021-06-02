@@ -44,6 +44,7 @@ python evaluate.py --agent-config=[PATH TO CONFIG]
 ```
 
 ### NoCrash routes
+Edit the config file to include the pretrained weights in `main_model_dir`
 ```bash
 python evaluate_nocrash.py --town={Town01,Town02} --weather={train, test} --agent-config=[PATH TO CONFIG] --resume
 ```
