@@ -1,9 +1,10 @@
 import tqdm
 import numpy as np
 import torch
-from .rails import RAILS
-from .datasets import data_loader
-from .logger import Logger
+from rails.rails import RAILS
+from rails.datasets import data_loader
+from rails.logger import Logger
+
 
 def main(args):
     
@@ -45,13 +46,13 @@ if __name__ == '__main__':
     
     parser.add_argument('--resume', default=None)
     
-    parser.add_argument('--data-dir', default='/ssd2/dian/challenge_data/main_trajs6')
-    parser.add_argument('--config-path', default='/home/dianchen/carla_challenge/config.yaml')
+    parser.add_argument('--data-dir', default='/scratch2/datasets/world_on_rails/main_trajs6_converted2')
+    parser.add_argument('--config-path', default='/home/mifs/ah2029/WorldOnRails/world_model/config.yml')
     parser.add_argument('--device', choices=['cpu', 'cuda'], default='cuda')
     
     # Training data config
     parser.add_argument('--fps', type=float, default=20)
-    parser.add_argument('--num-repeat', type=int, default=4)    # Should be consistent with autoagents/collector_agents/config.yaml
+    parser.add_argument('--num-repeat', type=int, default=4)  # Repeat action (I think)
 
     parser.add_argument('--num-workers', type=int, default=8)
     parser.add_argument('--batch-size', type=int, default=128)

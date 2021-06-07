@@ -5,14 +5,14 @@ def main(args):
     towns = {i: f'Town{i+1:02d}' for i in range(7)}
     towns.update({7: 'Town10HD'})
 
-    # scenario = 'assets/all_towns_traffic_scenarios.json'
-    scenario = 'assets/no_scenarios.json'
+    scenario = 'assets/all_towns_traffic_scenarios.json'
+    #scenario = 'assets/no_scenarios.json'
     route = 'assets/routes_all.xml'
     # route = 'assets/routes_training/route_10.xml'
 
     args.agent = 'autoagents/collector_agents/q_collector' # Use 'viz_collector' for collecting pretty images
-    # args.agent_config = 'config.yaml'
-    args.agent_config = 'experiments/config_nocrash.yaml'
+    args.agent_config = 'config.yaml'
+    #args.agent_config = 'experiments/config_nocrash.yaml'
 
     # args.agent = 'autoagents/collector_agents/lidar_q_collector'
     # args.agent_config = 'config_lidar.yaml'

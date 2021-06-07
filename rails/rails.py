@@ -5,10 +5,11 @@ import yaml
 import torch
 import torch.nn.functional as F
 from torch import nn, optim
-from .models import EgoModel, CameraModel
-from .bellman import BellmanUpdater
-from .datasets.main_dataset import MainDataset
-from .utils import to_numpy
+from rails.models import EgoModel, CameraModel
+from rails.bellman import BellmanUpdater
+from rails.datasets.main_dataset import MainDataset
+from rails.utils import to_numpy
+
 
 class RAILS:
     def __init__(self, args):

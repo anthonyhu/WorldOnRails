@@ -32,7 +32,7 @@ noise_collect: False
 use_narr_cam: True
 multi_cam: True
 all_speeds: True
-ego_data_dir: [PATH TO PHASE 0 DATA]
-ego_model_dir: [PATH TO PHASE 0 MODEL]
-main_data_dir: [PATH TO PHASE 1/2 DATA]
+ego_data_dir: [PATH TO EGO DATA]
+ego_model_dir: '/home/mifs/ah2029/WorldOnRails/ego_model.th'
+main_data_dir: '/scratch2/datasets/world_on_rails/own_dataset'
 main_model_dir: "/home/mifs/ah2029/WorldOnRails/pretrained_weights/challenge/main_model_10.th"
